@@ -1,0 +1,10 @@
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "cd backend && pip install -r requirements.txt && python main.py",
+    "healthcheckPath": "/api/system-info",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
